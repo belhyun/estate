@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>리딜 | 마이페이지 : 결제 요청 리스트</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="..." name="description" />
+    <meta content="..." name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta property="og:url" content="https://pensive-visvesvaraya-0c1af8.netlify.app/">
+    <meta property="og:title" content="리딜">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pensive-visvesvaraya-0c1af8.netlify.app/assets/images/redal.png">
+    <meta property="og:description" content="부동산 중개수수료 비대면 결제 서비스, 리딜">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" /> <!-- App Css-->
+<link rel="stylesheet" href="assets/css/app.min.css" />
+
+
+  </head>
+
+  <body id="pageMypage">
+    <!-- header -->
+    <header class="header">
+      <nav class="header-wrap">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    
+            <a href="index.html" class="brand-logo">
+              <img src="assets/images/logo/logo-d.svg" class="logo-dark">
+              <img src="assets/images/logo/logo-w.svg" class="logo-white">
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <a href="service.html">이용방법</a>
+              </li>
+              <li>
+                <a href="pay-select.html">중계수수료 결제요청</a>
+              </li>
+              <li>
+                <a href="mypage-user.html">마이페이지</a>
+              </li>
+              <li>
+                <a href="board-main.html">문의 및 공지</a>
+              </li>
+              <li>
+                <a href="login-main.html">로그인</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <h5 class="mb-2">마이페이지</h5>
+          
+          <div class="block mb-4">
+            <h6 class="mb-2">결제요청 리스트</h6>
+            <table>
+              <thead>
+                <tr class="border-top">
+                  <th>결제자</th>
+                  <th>결제 상태</th>
+                  <th>결제 완료일</th>
+                  <th>결제 요청</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="#modal" class="modal-trigger">홍길동</a></td>
+                  <td>결제완료</td>
+                  <td>21.03.11</td>
+                  <td><button type="button" class="btn" disabled>완료</button></td>
+                </tr>
+                <tr>
+                  <td><a href="#modal" class="modal-trigger">송영길</a></td>
+                  <td>결제완료</td>
+                  <td>21.04.18</td>
+                  <td><button type="button" class="btn" disabled>완료</button></td>
+                </tr>
+                <tr>
+                  <td><a href="#modal" class="modal-trigger">이중구</a></td>
+                  <td>결제미완료</td>
+                  <td>-</td>
+                  <td><button type="button" class="waves-effect waves-light btn btn-re">재요청</button></td>
+                </tr>
+                <tr>
+                  <td><a href="#modal" class="modal-trigger">오태식</a></td>
+                  <td>결제완료</td>
+                  <td>21.06.05</td>
+                  <td><button type="button" class="btn" disabled>완료</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="block">
+            <div class="btn-wrap">
+              <a href="mypage.html" class="waves-effect waves-light btn btn-cancle">돌아가기</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- header -->
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row mb-0">
+          <div class="col l6 s12">
+            <h5 class="footer-title">
+              <img src="assets/images/logo/logo-w.svg">
+            </h5>
+          </div>
+          <div class="col l6 s12">
+            <p class="footer-text"><b>우팍앤컴퍼니</b></p>
+            <p class="footer-text">사업자등록번호 : 860-31-00935</p>
+            <p class="footer-text">대표 : 박정우</p>
+            <p class="footer-text">통신판매업신고번호 : 2021-서울강동-1258</p>
+            <p class="footer-text">서울특별시 강동구 상암로79길 88, 715-704</p>
+            <p class="footer-text">0507-1332-3817</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2021 WUPARK & COMPANY
+        <a class="right" href="policy.html" target="_blank">개인정보 제3자동의</a>
+        </div>
+      </div>
+    </footer>
+    <!-- END header -->
+
+    <!-- sidenav -->
+    <!-- Side Nav -->
+    <ul id="slide-out" class="sidenav">
+        <li>
+          <div class="user-view">
+            <div class="logo">
+              <a href="#!" class="side-logo">
+                <img src="assets/images/logo/logo-d.svg" class="logo-dark">
+              </a>
+            </div>
+            <div class="login">
+              <a href="login-main.html" class="btn">로그인</a>
+              <a href="signup-main.html" class="btn">회원가입</a>
+            </div>
+    <!-- 
+            <div class="user-info">
+              <a href="#user"><img class="circle" src="assets/images/icon/user-entry.jpg"></a>
+              <div class="info-text">
+                <a href="#name"><span class="name">유인나</span></a>
+                <a href="#email"><span class="email">sdeecxdk@gmail.com</span></a>
+              </div>
+            </div>
+            -->
+          </div>
+        </li>
+        <li><a class="waves-effect" href="service.html">이용방법</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="waves-effect" href="pay-select.html">중개수수료 결제</a></li>
+        <li><a class="waves-effect" href="mypage-user.html">마이페이지(유저)</a></li>
+        <li><a class="waves-effect" href="mypage-franchisee.html">마이페이지(가맹점)</a></li>
+        <li><a class="waves-effect" href="board-main.html">문의 및 공지</a></li>
+        <li><a class="waves-effect" href="nonmember.html">비회원결제(임시)</a></li>
+    </ul>
+    <!-- Side Nav END -->
+
+
+    <!-- END sidenav -->
+    
+    <!-- 이용약관 팝업 -->
+    <div id="modal" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h6>결제요청 리스트</h6>
+        <table>
+          <tbody>
+            <tr class="border-top">
+              <th>결제자</th>
+              <td>홍길동</td>
+            </tr>
+            <tr>
+              <th>거래유형</th>
+              <td>월세</td>
+            </tr>
+            <tr>
+              <th>부동산 종류</th>
+              <td>원룸</td>
+            </tr>
+            <tr>
+              <th>보증금</th>
+              <td>1,000 만원</td>
+            </tr>
+            <tr>
+              <th>월세</th>
+              <td>50 만원</td>
+            </tr>
+            <tr>
+              <th>중개수수료 결제금액</th>
+              <td>30 만원</td>
+            </tr>
+            <tr>
+              <th>이메일 주소</th>
+              <td>wsia@gmail.com</td>
+            </tr>
+            <tr>
+              <th>휴대폰 번호</th>
+              <td>010-8200-5123</td>
+            </tr>
+            <tr>
+              <th>거래 완료일<br>(중개수수료 요청일)</th>
+              <td>거래대상유형 2</td>
+            </tr>
+            <tr>
+              <th>결제상태</th>
+              <td>결제완료</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect btn-flat">닫기</a>
+      </div>
+    </div>
+    <!-- END 이용약관 팝업 -->
+
+    <!-- App js -->
+    <script src="assets/js/vender.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+  </body>
+</html>

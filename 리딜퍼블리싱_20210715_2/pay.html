@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>리딜 | 결제 요청하기</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="..." name="description" />
+    <meta content="..." name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta property="og:url" content="https://pensive-visvesvaraya-0c1af8.netlify.app/">
+    <meta property="og:title" content="리딜">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pensive-visvesvaraya-0c1af8.netlify.app/assets/images/redal.png">
+    <meta property="og:description" content="부동산 중개수수료 비대면 결제 서비스, 리딜">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" /> <!-- App Css-->
+<link rel="stylesheet" href="assets/css/app.min.css" />
+
+
+  </head>
+
+  <body id="pagePay">
+    <!-- header -->
+    <header class="header">
+      <nav class="header-wrap">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    
+            <a href="index.html" class="brand-logo">
+              <img src="assets/images/logo/logo-d.svg" class="logo-dark">
+              <img src="assets/images/logo/logo-w.svg" class="logo-white">
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <a href="service.html">이용방법</a>
+              </li>
+              <li>
+                <a href="pay-select.html">중계수수료 결제요청</a>
+              </li>
+              <li>
+                <a href="mypage-user.html">마이페이지</a>
+              </li>
+              <li>
+                <a href="board-main.html">문의 및 공지</a>
+              </li>
+              <li>
+                <a href="login-main.html">로그인</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+
+    <main>
+      <section class="section section-1">
+        <div class="container">
+          <div class="content-wrap">
+            <form class="pay-form">
+              <h4 class="title">결제 요청하기</h4>
+
+              <!-- 거래방식 -->
+              <div class="input-field">
+                <select id="deal">
+                  <option value="" disabled selected>거래방식</option>
+                  <option value="1">월세 (반전세 포함)</option>
+                  <option value="2">전세</option>
+                  <option value="3">매매</option>
+                  <option value="4">단기임대</option>
+                </select>
+              </div>
+
+              <!-- 결제자 유형 : 매수자 -->
+              <div class="input-field option option-a-1">
+                <select>
+                  <option value="" disabled selected>결제자 유형</option>
+                  <option value="1">매수자 (사는 사람)</option>
+                  <option value="2">매도자 (파는 사람)</option>
+                </select>
+              </div>
+              <!-- 결제자 유형 : 임대인 -->
+              <div class="input-field option option-a-2">
+                <select>
+                  <option value="" disabled selected>결제자 유형</option>
+                  <option value="3">임대인 (빌려주는 사람)</option>
+                  <option value="4">임차인 (빌리는 사람)</option>
+                </select>
+              </div>
+
+              <!-- 부동산 유형 : 분양권 제외 -->
+              <div class="input-field option option-b-1">
+                <select>
+                  <option value="" disabled selected>부동산 유형</option>
+                  <option value="1">아파트</option>
+                  <option value="2">오피스텔</option>
+                  <option value="3">원룸/투룸</option>
+                  <option value="4">빌라/연립</option>
+                  <option value="5">단독/다가구</option>
+                  <option value="6">상가주택</option>
+                  <option value="7">상가</option>
+                  <option value="8">사무실</option>
+                  <option value="9">공장</option>
+                  <option value="10">지식산업센터</option>
+                  <option value="11">토지</option>
+                </select>
+              </div>
+              <!-- 부동산 유형 : 토지/분양권 제외-->
+              <div class="input-field option option-b-2">
+                <select>
+                  <option value="" disabled selected>부동산 유형</option>
+                  <option value="1">아파트</option>
+                  <option value="2">오피스텔</option>
+                  <option value="3">원룸/투룸</option>
+                  <option value="4">빌라/연립</option>
+                  <option value="5">단독/다가구</option>
+                  <option value="6">상가주택</option>
+                  <option value="7">상가</option>
+                  <option value="8">사무실</option>
+                  <option value="9">공장</option>
+                  <option value="10">지식산업센터</option>
+                </select>
+              </div>
+              <!-- 부동산 유형 All -->
+              <div class="input-field option option-b-3">
+                <select>
+                  <option value="" disabled selected>부동산 유형</option>
+                  <option value="1">아파트</option>
+                  <option value="2">오피스텔</option>
+                  <option value="3">원룸/투룸</option>
+                  <option value="4">빌라/연립</option>
+                  <option value="5">단독/다가구</option>
+                  <option value="6">상가주택</option>
+                  <option value="7">상가</option>
+                  <option value="8">사무실</option>
+                  <option value="9">공장</option>
+                  <option value="10">지식산업센터</option>
+                  <option value="11">토지</option>
+                  <option value="12">아파트 분양권</option>
+                  <option value="13">오피스텔 분양권</option>
+                </select>
+              </div>
+
+              <!-- 거래금액 : 매매가액 -->
+              <div class="input-field option option-c-1">
+                <input id="price2" type="number" class="validate">
+                <label for="price2">매매가액</label>
+              </div>
+              <!-- 거래금액 : 보증금 -->
+              <div class="input-field option option-c-2">
+                <input id="price1" type="number" class="validate">
+                <label for="price1">보증금</label>
+              </div>
+
+              <!-- 거래방식 : 월세 -->
+              <div class="input-field option option-d-1">
+                <input id="price3" type="number" class="validate">
+                <label for="price3">월세</label>
+              </div>
+              <!-- 거래방식 : 임대료 -->
+              <div class="input-field option option-d-2">
+                <input id="price4" type="number" class="validate">
+                <label for="price4">임대료</label>
+              </div>
+
+              <div class="input-field">
+                <input id="BusinessNum" type="number" class="validate">
+                <label for="BusinessNum">중개수수료 결제 금액</label>
+              </div>
+
+              <div class="row form-row">
+                <div class="input-field col s4">
+                  <select>
+                    <option value="" disabled selected>통신사</option>
+                    <option value="1">SKT</option>
+                    <option value="2">KT</option>
+                    <option value="3">LG</option>
+                    <option value="3">알뜰폰</option>
+                  </select>
+                </div>
+
+                <div class="input-field col s8">
+                    <input id="RegNum" type="number" class="validate">
+                    <label for="RegNum">휴대전화번호</label>
+                </div>
+              </div>
+
+              <div class="input-field">
+                <input id="userEmail" type="email" class="validate">
+                <label for="userEmail">이메일</label>
+                <span class="helper-text" data-error="올바른 메일 주소가 아닙니다."></span>
+              </div>
+              
+              <div class="btn-wrap">
+                <a href="pay-2.html" class="waves-effect waves-light btn">다음 단계</a>
+                <a href="main.html" class="waves-effect waves-light btn btn-cancle">돌아가기</a>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- header -->
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row mb-0">
+          <div class="col l6 s12">
+            <h5 class="footer-title">
+              <img src="assets/images/logo/logo-w.svg">
+            </h5>
+          </div>
+          <div class="col l6 s12">
+            <p class="footer-text"><b>우팍앤컴퍼니</b></p>
+            <p class="footer-text">사업자등록번호 : 860-31-00935</p>
+            <p class="footer-text">대표 : 박정우</p>
+            <p class="footer-text">통신판매업신고번호 : 2021-서울강동-1258</p>
+            <p class="footer-text">서울특별시 강동구 상암로79길 88, 715-704</p>
+            <p class="footer-text">0507-1332-3817</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2021 WUPARK & COMPANY
+        <a class="right" href="policy.html" target="_blank">개인정보 제3자동의</a>
+        </div>
+      </div>
+    </footer>
+    <!-- END header -->
+
+    <!-- sidenav -->
+    <!-- Side Nav -->
+    <ul id="slide-out" class="sidenav">
+        <li>
+          <div class="user-view">
+            <div class="logo">
+              <a href="#!" class="side-logo">
+                <img src="assets/images/logo/logo-d.svg" class="logo-dark">
+              </a>
+            </div>
+            <div class="login">
+              <a href="login-main.html" class="btn">로그인</a>
+              <a href="signup-main.html" class="btn">회원가입</a>
+            </div>
+    <!-- 
+            <div class="user-info">
+              <a href="#user"><img class="circle" src="assets/images/icon/user-entry.jpg"></a>
+              <div class="info-text">
+                <a href="#name"><span class="name">유인나</span></a>
+                <a href="#email"><span class="email">sdeecxdk@gmail.com</span></a>
+              </div>
+            </div>
+            -->
+          </div>
+        </li>
+        <li><a class="waves-effect" href="service.html">이용방법</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="waves-effect" href="pay-select.html">중개수수료 결제</a></li>
+        <li><a class="waves-effect" href="mypage-user.html">마이페이지(유저)</a></li>
+        <li><a class="waves-effect" href="mypage-franchisee.html">마이페이지(가맹점)</a></li>
+        <li><a class="waves-effect" href="board-main.html">문의 및 공지</a></li>
+        <li><a class="waves-effect" href="nonmember.html">비회원결제(임시)</a></li>
+    </ul>
+    <!-- Side Nav END -->
+
+
+    <!-- END sidenav -->
+
+
+    <!-- 이용약관 팝업 -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>개인정보/약관</h4>
+
+        <div class="check-wap">
+          <h5>이용약관 동의</h5>
+          <div class="switch">
+            <label>
+              <input type="checkbox">
+              <span class="lever"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="scroll-box">
+          <p>text</p>
+          <p>text text</p>
+          <p>text text text text</p>
+          <p>text</p>
+          <p>text</p>
+          <p>text text</p>
+          <p>text text text text</p>
+          <p>text</p>
+          <p>text</p>
+          <p>text text</p>
+          <p>text text text text</p>
+          <p>text</p>
+          <p>text</p>
+          <p>text text</p>
+          <p>text text text text</p>
+          <p>text</p>
+          <p>text</p>
+          <p>text text</p>
+          <p>text text text text</p>
+          <p>text</p>
+          <p>text</p>
+          <p>text text</p>
+          <p>text text text text</p>
+          <p>text</p>
+          <p>text</p>
+          <p>text text</p>
+          <p>text text text text</p>
+          <p>text</p>
+          <p>text</p>
+          <p>text text</p>
+          <p>text text text text</p>
+          <p>text</p>
+        </div>
+        
+        <div class="check-wap">
+          <h5>3자 개인정보 제공 동의</h5>
+          <div class="switch">
+            <label>
+              <input type="checkbox">
+              <span class="lever"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="scroll-box mb-0">
+          <p>text</p>
+          <p>text text</p>
+          <p>text text text text</p>
+          <p>text</p>
+          <p>text</p>
+          <p>text text</p>
+          <p>text text text text</p>
+          <p>text</p>
+          <p>text</p>
+          <p>text text</p>
+          <p>text text text text</p>
+          <p>text</p>
+          <p>text</p>
+          <p>text text</p>
+          <p>text text text text</p>
+          <p>text</p>
+          <p>text</p>
+          <p>text text</p>
+          <p>text text text text</p>
+          <p>text</p>
+          <p>text</p>
+          <p>text text</p>
+          <p>text text text text</p>
+          <p>text</p>
+          <p>text</p>
+          <p>text text</p>
+          <p>text text text text</p>
+          <p>text</p>
+          <p>text</p>
+          <p>text text</p>
+          <p>text text text text</p>
+          <p>text</p>
+        </div>
+      </div>
+      <a href="#!" class="modal-close waves-effect waves-light btn btn-primary check">약관 동의 후 회원 가입 마무리 하기</a>
+      <a href="#!" class="modal-close waves-effect waves-light btn btn-cancle uncheck">돌아가기</a>
+    </div>
+    <!-- END 이용약관 팝업 -->
+
+    <!-- App js -->
+    <script src="assets/js/vender.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+
+    <script>
+      $("#deal").change(function(){   
+        var roomS = $("#deal option:selected").val();
+        
+        if(roomS == 1){
+          $(".option").hide();
+          $(".option-a-2").show();
+          $(".option-b-1").show();
+          $(".option-c-2").show();
+          $(".option-d-1").show();
+        }if(roomS == 2){
+          $(".option").hide();
+          $(".option-a-2").show();
+          $(".option-b-2").show();
+          $(".option-c-2").show();
+        }if(roomS == 3){
+          $(".option").hide();
+          $(".option-a-1").show();
+          $(".option-b-3").show();
+          $(".option-c-1").show();
+        }if(roomS == 4){
+          $(".option").hide();
+          $(".option-a-2").show();
+          $(".option-b-1").show();
+          $(".option-c-2").show();
+          $(".option-d-2").show();
+        }
+      })
+    </script>
+  </body>
+</html>
