@@ -37,13 +37,13 @@
                         <a href="/pay-select">중계수수료 결제요청</a>
                     </li>
                     <li>
-                        <a href="mypage-user.html">마이페이지</a>
+                        <a href="/mypage-user">마이페이지</a>
                     </li>
                     <li>
-                        <a href="board-main.html">문의 및 공지</a>
+                        <a href="/board-main">문의 및 공지</a>
                     </li>
                     <li>
-                        <a href="login-main.html">로그인</a>
+                        <a href="/login-main">로그인</a>
                     </li>
                 </ul>
             </div>
@@ -77,14 +77,14 @@
     <div class="footer-copyright">
         <div class="container">
             © 2021 WUPARK & COMPANY
-            <a class="right" href="policy.html" target="_blank">개인정보 제3자동의</a>
+            <a class="right" href="/policy" target="_blank">개인정보 제3자동의</a>
         </div>
     </div>
 </footer>
 <!-- END footer -->
 
 <!-- flow-btn -->
-<a href="sign.html" class="btn btn-large flow-btn">회원가입</a>
+@yield('signup')
 <!-- END flow-btn -->
 
 <!-- sidenav -->
@@ -94,12 +94,12 @@
         <div class="user-view">
             <div class="logo">
                 <a href="#!" class="side-logo">
-                    <img src="assets/images/logo/logo-d.svg" class="logo-dark">
+                    <img src="{{ asset('assets/images/logo/logo-d.svg')}}" class="logo-dark">
                 </a>
             </div>
             <div class="login">
-                <a href="login-main.html" class="btn">로그인</a>
-                <a href="signup-main.html" class="btn">회원가입</a>
+                <a href="/login-main" class="btn">로그인</a>
+                <a href="/signup-main" class="btn">회원가입</a>
             </div>
             <!--
                     <div class="user-info">
@@ -114,11 +114,11 @@
     </li>
     <li><a class="waves-effect" href="/service">이용방법</a></li>
     <li><div class="divider"></div></li>
-    <li><a class="waves-effect" href="pay-select.html">중개수수료 결제</a></li>
-    <li><a class="waves-effect" href="mypage-user.html">마이페이지(유저)</a></li>
-    <li><a class="waves-effect" href="mypage-franchisee.html">마이페이지(가맹점)</a></li>
-    <li><a class="waves-effect" href="board-main.html">문의 및 공지</a></li>
-    <li><a class="waves-effect" href="nonmember.html">비회원결제(임시)</a></li>
+    <li><a class="waves-effect" href="/pay-select">중개수수료 결제</a></li>
+    <li><a class="waves-effect" href="/mypage-user">마이페이지(유저)</a></li>
+    <li><a class="waves-effect" href="/mypage-franchisee">마이페이지(가맹점)</a></li>
+    <li><a class="waves-effect" href="/board-main">문의 및 공지</a></li>
+    <li><a class="waves-effect" href="/nonmember">비회원결제(임시)</a></li>
 </ul>
 <!-- Side Nav END -->
 

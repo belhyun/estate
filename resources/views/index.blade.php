@@ -283,3 +283,6 @@
 
 </main>
 @stop
+@section('signup')
+    <a href="/sign" class="btn btn-large flow-btn">회원가입</a>
+@stop
