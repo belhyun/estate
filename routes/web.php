@@ -145,6 +145,33 @@ Route::get('/index', function () {
     return view('/index');
 });
 
+Route::get('/mypage-franchisee', function () {
+    return view('/mypage-franchisee');
+});
+
+Route::get('/mypage-fr-edit', function () {
+    return view('/mypage-fr-edit');
+});
+
+Route::get('/nonmember', function () {
+    return view('/nonmember');
+});
+
+Route::get('/pay-qr', function () {
+    return view('/pay-qr');
+});
+
+Route::get('/commission', function () {
+    return view('/commission');
+});
+
+Route::get('/commission-next', function () {
+    return view('/commission-next');
+});
+
+Route::get('/email-comp', function () {
+    return view('/email-comp');
+});
 
 
 
