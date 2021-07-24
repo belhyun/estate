@@ -61,9 +61,14 @@ Route::get('/signup-all', function () {
     return view('/signup-all');
 });
 
+
+//공인중개사 회원가입
 Route::get('/signup', function () {
     return view('/signup');
 });
+Route::post("/sign-form", [\App\Http\Controllers\SignUpController::class, 'create']);
+
+
 
 Route::get('/sign-comp', function () {
     return view('/sign-comp');

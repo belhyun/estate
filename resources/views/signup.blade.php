@@ -4,17 +4,23 @@
         <section class="section section-1">
             <div class="container">
                 <div class="content-wrap">
-                    <form class="sign-form" action="sign-form" enctype="multipart/form-data">
+                    <form class="sign-form" action="sign-form" enctype="multipart/form-data" method="post">
                         {{ csrf_field() }}
                         <h4 class="title">회원가입</h4>
                         <div class="input-field">
                             <input id="userCompay" type="text" class="validate" name="com_name">
                             <label for="userCompay">공인중개업소명</label>
+                            @error('com_name')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
 
                         <div class="input-field">
-                            <input id="businessNum" type="number" class="validate" name=""business_num>
+                            <input id="businessNum" type="number" class="validate" name="business_num">
                             <label for="businessNum">사업자번호 (- 제외)</label>
+                            @error('business_num')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
 
                         <div class="input-field">
@@ -169,7 +175,7 @@
                             </label>
                         </p>
                         <div class="btn-wrap">
-                            <a href="/sign-comp" class="waves-effect waves-light btn btn-primay">회원가입 완료</a>
+                            <a href="#" onclick="$(this).closest('form').submit()" class="waves-effect waves-light btn btn-primay">회원가입 완료</a>
                         </div>
                     </form>
 
